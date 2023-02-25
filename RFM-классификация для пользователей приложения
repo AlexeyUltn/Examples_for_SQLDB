@@ -120,7 +120,6 @@ from (select user_id, count(*) cnt
 
 where status='Cancelled' 
 
- 
 
 --Наполнение recency 
 
@@ -350,9 +349,6 @@ order by user_id
 
 limit 10 
 
- 
-
- 
 
 --Перезапись вьюхи orders_new, при условии отсутствия статуса в исходной таблице 
 
