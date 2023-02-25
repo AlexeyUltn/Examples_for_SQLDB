@@ -1,5 +1,4 @@
 Ниже представлен код для RFM-классификации пользователей приложения.
-RFM (от англ. Recency, Frequency, Monetary Value) — способ сегментации клиентов, при котором анализируют их лояльность.
 
 --Создание таблиц 
 
@@ -41,47 +40,36 @@ CREATE TABLE analysis.tmp_rfm_monetary_value (
 
 ); 
 
- 
 
 --Создание 5 вьюх таблиц из базы production 
 
 create or replace view ordertimes as 
 
-select * 
-
-from production.orderitems; 
+select * from production.orderitems; 
 
  
 
 create or replace view orders as 
 
-select * 
-
-from production.orders; 
+select * from production.orders; 
 
  
 
 create or replace view orderstatuses as 
 
-select * 
-
-from production.orderstatuses; 
+select * from production.orderstatuses; 
 
  
 
 create or replace view orderstatuslog as 
 
-select * 
-
-from production.orderstatuslog; 
+select * from production.orderstatuslog; 
 
  
 
 create or replace view products as 
 
-select * 
-
-from production.products; 
+select * from production.products; 
 
 --Создание вьюхи orders_new 
 
