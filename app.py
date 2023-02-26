@@ -35,7 +35,7 @@ def main():
     data.append(x)
   return render_template('main_page_with_info.html' data=data)
 
-@app.route('/заглушка')
+@app.route('/add_info_to_main_page')
 def add_info_to_main_page():
   return render_template(add_info_to_main_page.html)
 
