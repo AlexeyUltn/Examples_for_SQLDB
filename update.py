@@ -10,6 +10,7 @@ cur_updatable_new = con_to_updatable_table.cursor()
 ## Настраиваю соединение с таблицей, чьими данными буду обновлять
 
 con_to_table_from = psycopg2.connect(database='', user='', password='', host='', port='', sslmode='require')
+
 cur_to_take_from = con_to_table_from.cursor()
 
 def max_id(cur_updatable):
