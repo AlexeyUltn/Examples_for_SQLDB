@@ -39,7 +39,7 @@ def main():
 def add_info_to_main_page():
   return render_template(add_info_to_main_page.html)
 
-class database(db.model):
+class Database(db.model):
   __tablename__ = 'sqlite_table'
   Id = db.Column(db.Integer, primary_key=True)
   Company_name =  db.Column(db.Text)
@@ -55,7 +55,7 @@ def add_info()
     Company_logo = request.form['Company_logo']
     IPO_date = request.form['IPO_date']
     
-    record = database(Company_name=Company_name, Company_logo= Company_logo, IPO_date=IPO_date)
+    record = Database(Company_name=Company_name, Company_logo= Company_logo, IPO_date=IPO_date)
     
     db.session.add(record)
     db.session.commit()
